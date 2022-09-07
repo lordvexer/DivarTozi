@@ -1,0 +1,225 @@
+        @font-face {
+            font-family: "iranyekan";
+            src: url("/libs/Fonts/iranyekanwebmedium.eot");
+            src: url("/libs/Fonts/iranyekanwebmedium.woff") format("woff");
+        }
+        :root {
+            --main-color: #fff;
+            --Secendary-color:#6c19ff ;
+            --Button-color:#6c19fF;
+            --Accordion-color:#6c19fF;
+            --Accordion-button-color:#3c0bffe8;
+            --City-sellector:#6c19fF;
+            --Text-theme-color:#792bff;
+            --Text-light:white;
+            --Text-dark:rgb(53, 53, 53);
+            
+        }
+        body {
+            font-family: 'iranyekan', tahoma, Arial;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background-color: var(--main-color);
+        }
+
+        .row {
+            --bs-gutter-x: 0.5rem;
+        }
+
+        a {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+
+        h2 {
+            line-height: 15px;
+        }
+
+        h5 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .NavStyle {
+            background: var(--Secendary-color);
+            z-index: 3;
+        }
+
+        button {
+            border: none;
+            margin: 1rem;
+            margin-right: -10px;
+            height: 45px;
+            background: #ffffff;
+            border-radius: 8px;
+            color: var(--Button-color);
+        }
+
+        button:hover {
+            transition: 0.7s 0.1s ease-in-out;
+
+        }
+
+        button img {
+            height: 40px;
+        }
+
+        .PathFix {
+            z-index: 2;
+        }
+
+        .ImageBackground {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .SvgTopHeader {
+            margin-top: -70px;
+            margin-bottom: -180px;
+
+        }
+
+        .SearchAndCategory {
+            margin: 2rem;
+            margin-top: 3rem;
+        }
+
+        .Category {
+            box-shadow: 0px 2px 16px 0px rgb(0 0 0 / 24%);
+            border-radius: 8px;
+
+        }
+
+        .SearchInput {
+            height: 46px;
+            border-color: unset;
+            border-radius: 8px;
+            margin: 1rem;
+        }
+
+        .accordion-header {
+            margin-bottom: 0;
+            margin-right: 1rem;
+            width: 93%;
+        }
+
+        .accordion-button:focus {
+            z-index: 3;
+            border-color: unset;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--Text-light);
+            background-color: unset;
+            box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+            background: var(--Accordion-color);
+
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border: unset;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: url(/img/arrow.svg);
+        }
+
+        .CatEndSellect {
+            width: 100%;
+            display: flex;
+            color: var(--Text-light);
+            background: var(--Accordion-button-color);
+            padding: 0.5rem
+        }
+
+        .accordion-item:first-of-type .accordion-button {
+            border-radius: 8px;
+        }
+
+        .CitySellection {
+            background: var(--City-sellector);
+            margin-right: 1rem;
+            color: var(--Text-light);
+        }
+
+        .AdListView {
+            padding: 1rem;
+            column-gap: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .AdlistSlider {
+            display: flex;
+        }
+
+
+
+        .Adcard {
+            max-width: 300px;
+            max-height: 400px;
+            background-color: #FFF;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            margin: 10px auto;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        .Adcard img {
+            transition: all linear 0.25s;
+        }
+        
+        .Adcard .AdName {
+            position: absolute;
+            left: 30px;
+            bottom: 70px;
+            font-size: 30px;
+            color: var(--Text-light);
+            text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            transition: all linear 0.25s;
+        }
+        
+        
+        .Adcard .AdLocation {
+            position: absolute;
+            bottom: 50px;
+            left: 30px;
+            color:var(--Text-light);
+            font-size: 13px;
+            transition: all linear 0.25s;
+        }
+        
+        .Adcard .profile-icons .fa {
+            margin: 5px;
+        }
+        
+        .Adcard:hover img {
+            filter: blur(2px);
+        }
+        
+        .Adcard:hover .AdName {
+            bottom: 80px;
+        }
+        
+        .Adcard:hover .AdLocation {
+            bottom: 60px;
+        }
+        
+        .Adcard:hover .profile-icons {
+            right: 40px;
+        }
+        
