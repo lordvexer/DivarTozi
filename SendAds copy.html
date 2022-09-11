@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سامانه مبادلات</title>
+    <link href="/libs/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <!-- FavIcons Add -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/FavIcon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/FavIcon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/FavIcon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/FavIcon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/FavIcon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/FavIcon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/FavIcon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/FavIcon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/FavIcon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/FavIcon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/FavIcon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/FavIcon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/FavIcon/favicon-16x16.png">
+    <link rel="manifest" href="/img/FavIcon/manifest.json">
+    <meta name="msapplication-TileColor" content="#6c19ff">
+    <meta name="msapplication-TileImage" content="/img/FavIcon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#6c19ff">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light NavStyle  ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://tvedc.ir/">شرکت توزیع استان تهران</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" target="_self">
+                    <form class="d-flex  ">
+                        <a href="#" target="_self">
+                            <button type="button" class="SendAd">ارسال درخواست<img src="/img/Send.png"
+                                    class="SendIcon"></button>
+                        </a>
+                        <!-- <a href="#" target="_self">
+                            <button><img src="/img/Login.png" alt=""></button>
+                        </a> -->
+                    </form>
+            </div>
+        </nav>
+
+        <div class="SvgTopHeader">
+            <img src="/img/Header.svg" class="responsive" alt="">
+        </div>
+    </header>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-md-12 ">
+                <img src="/img/11.png" class="sideImageSendAds">
+            </div>
+            <div class="col-lg-6 col-sm-12 col-sm-12 order-md-first">
+                <div class="InputsSection">
+                    <select class="form-select">
+                        <option selected>انتخاب منطقه</option>
+                        <option value="1">ستاد</option>
+                    </select>
+                    <select class="form-select">
+                        <option selected>نوع اقدام</option>
+                        <option value="1">معاوضه</option>
+                        <option value="2">درخواست</option>
+                        <option value="3">واگذاری</option>
+                    </select>
+                    <select class="form-select">
+                        <option selected>دسته بندی</option>
+                        <option value="1">وسایل دفتری</option>
+                        <option value="2">وسایل شخصی</option>
+                        <option value="3">وسایل کار اداری</option>
+                    </select>
+                    <div class="input-Modern">
+                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">عنوان وسیله</label>
+                    </div>
+                    <div class="input-Modern">
+                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">شماره دفتر</label>
+                    </div>
+                    <div class="input-Modern">
+                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">شماره موبایل</label>
+                    </div>
+                    <div class="input-Modern">
+                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">نام دفتر</label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control ImageUpload" accept="image/*">
+                    </div>
+
+                    <div class="input-Modern ">
+                        <textarea required="" type="text" name="text" autocomplete="off"
+                            class="input AdAbout"></textarea>
+                        <label class="user-label">توضیح کوتاه</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Ad Save Modal -->
+    <div class="modal fade" id="CitySelectionModal" tabindex="-1" aria-labelledby="CitySellectionLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="CitySellectionLabel">شهر مورد نظر خود را انتخاب کنید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button>ستاد</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Footer -->
+   <div class="">
+    <img class="SvgFooter" src="/img/ads imge/footer.svg" alt="tvedc.ir">
+    <a href="tvedc.ir">
+        <!-- <p>شرکت توزیع برق استان تهران</p> -->
+    </a>
+</div>
+
+
+
+    <!-- Scripts -->
+    <script src="js\customjs.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/libs/bootstrap/js/bootst.min.js"></script>
+    <!-- <script src="/js/mainjs.js"></script> -->
+</body>

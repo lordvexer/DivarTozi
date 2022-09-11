@@ -3,18 +3,20 @@
             src: url("/libs/Fonts/iranyekanwebmedium.eot");
             src: url("/libs/Fonts/iranyekanwebmedium.woff") format("woff");
         }
+
         :root {
             --main-color: #fff;
-            --Secendary-color:#6c19ff ;
-            --Button-color:#6c19fF;
-            --Accordion-color:#6c19fF;
-            --Accordion-button-color:#3c0bffe8;
-            --City-sellector:#6c19fF;
-            --Text-theme-color:#792bff;
-            --Text-light:white;
-            --Text-dark:rgb(53, 53, 53);
-            
+            --Secendary-color: #6c19ff;
+            --Button-color: #6c19fF;
+            --Accordion-color: #6c19fF;
+            --Accordion-button-color: #3c0bffe8;
+            --City-sellector: #6c19fF;
+            --Text-theme-color: #792bff;
+            --Text-light: white;
+            --Text-dark: rgb(53, 53, 53);
+
         }
+
         body {
             font-family: 'iranyekan', tahoma, Arial;
             -webkit-font-smoothing: antialiased;
@@ -77,13 +79,15 @@
         .ImageBackground {
             max-width: 100%;
             height: auto;
+            margin-top: -9rem;
         }
 
+        /* 
         .SvgTopHeader {
-            margin-top: -70px;
-            margin-bottom: -180px;
+            margin-top: -55px;
+            margin-bottom: -420px;
 
-        }
+        } */
 
         .SearchAndCategory {
             margin: 2rem;
@@ -93,6 +97,7 @@
         .Category {
             box-shadow: 0px 2px 16px 0px rgb(0 0 0 / 24%);
             border-radius: 8px;
+            margin-bottom: 5rem;
 
         }
 
@@ -146,9 +151,10 @@
         }
 
         .CitySellection {
-            background: var(--City-sellector);
+            background: #ffffff;
             margin-right: 1rem;
-            color: var(--Text-light);
+            color: var(--City-sellector);
+            border: 1px solid #6c19ff;
         }
 
         .AdListView {
@@ -177,14 +183,14 @@
             cursor: pointer;
             border-radius: 10px;
         }
-        
+
         .Adcard img {
             transition: all linear 0.25s;
         }
-        
+
         .Adcard .AdName {
             position: absolute;
-            left: 30px;
+            right: 10%;
             bottom: 70px;
             font-size: 30px;
             color: var(--Text-light);
@@ -192,34 +198,297 @@
             font-weight: bold;
             transition: all linear 0.25s;
         }
-        
-        
+
+
         .Adcard .AdLocation {
             position: absolute;
             bottom: 50px;
-            left: 30px;
-            color:var(--Text-light);
+            right: 10%;
+            color: var(--Text-light);
             font-size: 13px;
             transition: all linear 0.25s;
         }
-        
+
         .Adcard .profile-icons .fa {
             margin: 5px;
         }
-        
+
         .Adcard:hover img {
             filter: blur(2px);
         }
-        
+
         .Adcard:hover .AdName {
             bottom: 80px;
         }
-        
+
         .Adcard:hover .AdLocation {
             bottom: 60px;
         }
-        
+
         .Adcard:hover .profile-icons {
             right: 40px;
         }
-        
+
+        .Footer {
+            height: 50px;
+            background: #6c19ff;
+            padding: 1rem;
+        }
+
+        .Footer p {
+            color: #FFF;
+            text-align: center;
+        }
+
+        .modal-body button {
+            background: white;
+            border: 1px solid #6c19ff;
+            width: 100px;
+        }
+
+        @media (min-width: 576px) {
+
+            .modal-dialog {
+                max-width: 814px;
+                margin: 7.75rem auto;
+            }
+        }
+
+        .modal-body {
+            padding-right: 5rem;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #0d2568;
+            border-color: unset;
+        }
+
+        .FooterImg {
+            position: absolute;
+            height: 8rem;
+        }
+
+        footer a {
+            position: absolute;
+            z-index: 1;
+            color: var(--main-color);
+            text-align: center;
+            right: 45%;
+            margin-top: 5rem;
+        }
+
+        /* SendAds.html Css */
+        /* From uiverse.io by @alexruix */
+        .InputsSection {
+            margin-top: 20%;
+            display: flex;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .input-group {
+            width: unset;
+        }
+
+        .input-Modern {
+            position: relative;
+        }
+
+        .input {
+            border: solid 1.5px #6200ff;
+            border-radius: 10px;
+            background: none;
+            padding: 1rem;
+            font-size: 1rem;
+            color: #004085;
+            transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .user-label {
+            position: absolute;
+            right: 15px;
+            color: var(--Text-theme-color);
+            pointer-events: none;
+            transform: translateY(1rem);
+            transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .input:focus,
+        input:valid {
+            outline: none;
+            border: 1.5px solid #1a73e8;
+        }
+
+        .input:focus~label,
+        input:valid~label {
+            transform: translateY(-50%) scale(0.8);
+            background-color: white;
+            padding: 0 .2em;
+            color: #2196f3;
+        }
+
+        .textarea:focus,
+        textarea:valid {
+            outline: none;
+            border: 1.5px solid #1a73e8;
+        }
+
+        .textarea:focus~label,
+        textarea:valid~label {
+            transform: translateY(-50%) scale(0.8);
+            background-color: white;
+            padding: 0 .2em;
+            color: #2196f3;
+        }
+
+        .AdAbout {
+            height: 117px;
+            width: 443px;
+        }
+
+        .form-control {
+            width: 100%;
+            color: #6c19ff;
+            background-color: #fff;
+            border: 1px solid #6c19ff !important;
+            border-radius: 8px;
+        }
+
+        input::file-selector-button {
+            font-weight: unset;
+            color: rgb(174, 0, 255);
+            padding: 0.5em;
+            border: unset;
+            border-radius: 3px;
+            height: 60px;
+            width: 100px;
+            background: #6c19fF;
+        }
+
+        input[type=file]::file-selector-button:hover {
+            background: #0d2568;
+        }
+
+        input[type=file]::file-selector-button {
+            padding: .2em .4em;
+            border-radius: .2em;
+            background-color: var(--Button-color);
+            transition: 1s;
+            color: #FFF;
+        }
+
+
+        .form-control[type=file]:not(:disabled):not([readonly]) {
+            cursor: pointer;
+        }
+
+        .input-group>.form-control,
+        .input-group>.form-select {
+            flex: unset;
+            width: 215px;
+        }
+
+
+
+
+        /*Styling Selectbox*/
+        .form-select {
+            width: 215px;
+            color: #6c19ff;
+            background-color: #fff;
+            border: 1px solid #6c19ff;
+            border-radius: 10px;
+        }
+
+        .sideImageSendAds {
+            border-radius: 10px;
+            width: 28 rem;
+            height: 33rem;
+        }
+
+        .SvgFooter {
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        /* 
+        @media screen and (max-width: 1800px) and (min-width: 1600px)
+        {
+            .SvgTopHeader {
+                margin-top: -55px;
+                margin-bottom: -180px;
+    
+            }
+        }
+        @media screen and (max-width: 1600px) and (min-width: 600px)
+        {
+            .SvgTopHeader {
+                margin-top: -55px;
+                margin-bottom: -375px;
+    
+            }
+        }
+           */
+
+
+
+        /* From uiverse.io by @adamgiebl */
+        .SendAd {
+            font-family: inherit;
+            font-size: 20px;
+            background: #3219ff;
+            color: white;
+            padding: 0.7em 1em;
+            padding-left: 0.9em;
+            display: flex;
+            align-items: center;
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.2s;
+            margin-right: 0rem;
+        }
+
+        .SendAd span {
+            display: block;
+            margin-left: 0.3em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .SendAd svg {
+            display: block;
+            transform-origin: center center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .SendAd:hover .svg-wrapper {
+            animation: fly-1 0.6s ease-in-out infinite alternate;
+        }
+
+        .SendAd:hover svg {
+            transform: translateX(1.2em) rotate(45deg) scale(1.1);
+        }
+
+        .SendAd:hover span {
+            transform: translateX(5em);
+        }
+
+        .SendAd:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes fly-1 {
+            from {
+                transform: translateY(0.1em);
+            }
+
+            to {
+                transform: translateY(-0.1em);
+            }
+        }

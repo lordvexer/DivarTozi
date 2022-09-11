@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>شرکت توزیع نیروی برق استان تهران</title>
+    <title>سامانه مبادلات</title>
     <link href="/libs/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" type="text/css" />
     <link href="/css/index.css" rel="stylesheet" type="text/css" />
     <!-- FavIcons Add -->
@@ -22,16 +22,16 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/img/FavIcon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/FavIcon/favicon-16x16.png">
     <link rel="manifest" href="/img/FavIcon/manifest.json">
-    <meta name="msapplication-TileColor" content="#f1c40f">
+    <meta name="msapplication-TileColor" content="#6c19ff">
     <meta name="msapplication-TileImage" content="/img/FavIcon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#f1c40f">
+    <meta name="theme-color" content="#6c19ff">
 </head>
 
 <body>
 
 
     <!-- NavBar -->
-    <header>
+    <header style="height: 170px;margin-bottom: 8rem;">
         <nav class="navbar navbar-expand-md navbar-light NavStyle  ">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,23 +42,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">صفحه اصلی</a>
+                            <a class="nav-link" href="/index.html">صفحه اصلی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://shafaf.tvedc.ir/">شرکت توزیع استان تهران</a>
+                            <a class="nav-link" href="https://tvedc.ir/">شرکت توزیع استان تهران</a>
                         </li>
 
                     </ul>
                 </div>
                 <a href="#" target="_self">
                     <form class="d-flex  ">
-                        <a href="#" target="_self">
+                        <a href="/SendAds.html" target="_self">
                             <button type="button" class="SendAd">ارسال درخواست<img src="/img/Send.png"
                                     class="SendIcon"></button>
                         </a>
-                        <a href="#" target="_self">
+                        <!-- <a href="#" target="_self">
                             <button><img src="/img/Login.png" alt=""></button>
-                        </a>
+                        </a> -->
                     </form>
             </div>
         </nav>
@@ -68,15 +68,20 @@
                     d="M0,64L80,90.7C160,117,320,171,480,165.3C640,160,800,96,960,80C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
                 </path>
             </svg>
+        </div>
     </header>
-    <div>
-    </div>
     <div class="container-fluid ">
-
         <div class="row SearchAndCategory">
-            <div class="col-sm-6">
+            <div class="col-lg-6 col-sm-12 col-md-12 order-md-first">
+                <div class="">
+                    <img class="ImageBackground" src="/img/Background.png">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 col-sm-12 ">
                 <div class="card Category">
-                    <button class="CitySellection">فیلتر بر اساس شهر</button>
+                    <button class="CitySellection" data-bs-toggle="modal" data-bs-target="#CitySelectionModal">فیلتر بر
+                        اساس شهر</button>
                     <input class="SearchInput" placeholder="جستجو کنید ....">
                     <div class="accordion" id="accordionCategory">
                         <p style="margin-right: 1rem; margin-bottom: 2rem; color: #6c19ff;">دسته بندی خود را انتخاب کنید
@@ -130,12 +135,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-6">
-                <div class="">
-                    <img class="ImageBackground" src="/img/Background.png">
-                </div>
-            </div>
         </div>
         <div class="row">
             <div class=" AdListView">
@@ -156,7 +155,7 @@
                     <div class="AdName">هندزفری بلوتوث</div>
                     <div class="AdLocation">منطقه برق لواسان</div>
                 </div>
-                <div class="Adcard"><img src="/img/ads imge/office_spaces.png" class="img img-responsive">
+                <div class="Adcard"><img src="/img/ads imge/4.png" class="img img-responsive">
                     <div class="AdName">هندزفری بلوتوث</div>
                     <div class="AdLocation">منطقه برق پردیس</div>
                 </div>
@@ -169,11 +168,33 @@
 
         </div>
     </div>
+
+    <!--City Sellector Modal -->
+    <div class="modal fade" id="CitySelectionModal" tabindex="-1" aria-labelledby="CitySellectionLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="CitySellectionLabel">شهر مورد نظر خود را انتخاب کنید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button>ستاد</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-
     <!-- Footer -->
-
+    <footer>
+        <img style="width:100%;height:8rem" class="FooterImg" src="/img/footer.png" alt="tvedc.ir">
+        <a href="tvedc.ir">
+            <p>شرکت توزیع برق استان تهران</p>
+        </a>
+    </footer>
 
 
 
