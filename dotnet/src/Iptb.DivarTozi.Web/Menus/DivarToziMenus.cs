@@ -1,4 +1,4 @@
-﻿namespace Iptb.DivarTozi.Web.Menus;
+namespace Iptb.DivarTozi.Web.Menus;
 
 public class DivarToziMenus
 {
@@ -7,4 +7,7 @@ public class DivarToziMenus
 
     //Add your menu items here...
 
+    public const string Agahi = Prefix + ".Agahi";
+    public const string Dastebandi = Prefix + ".Dastebandi";
+    public const string Mantage = Prefix + ".Mantage";
 }

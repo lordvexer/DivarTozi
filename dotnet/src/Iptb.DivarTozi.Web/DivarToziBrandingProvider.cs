@@ -6,5 +6,5 @@ namespace Iptb.DivarTozi.Web;
 [Dependency(ReplaceServices = true)]
 public class DivarToziBrandingProvider : DefaultBrandingProvider
 {
-    public override string AppName => "DivarTozi";
+    public override string AppName => "دیوار توزیع نیروی برق استان تهران";
 }

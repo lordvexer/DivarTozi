@@ -1,0 +1,48 @@
+@page
+@using Iptb.DivarTozi.Permissions
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Iptb.DivarTozi.Web.Pages.MantageHa.Mantage
+@using Iptb.DivarTozi.Localization
+@using Iptb.DivarTozi.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<DivarToziResource> L
+@inject IAuthorizationService Authorization
+@{
+    PageLayout.Content.Title = L["Mantage"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Mantage"].Value);
+    PageLayout.Content.MenuItemName = DivarToziMenus.Mantage;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/MantageHa/Mantage/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/MantageHa/Mantage/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["Mantage"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-end">
+			    @if (await Authorization.IsGrantedAsync(DivarToziPermissions.Mantage.Create))
+                {
+                <abp-button id="NewMantageButton"
+                            text="@L["CreateMantage"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="MantageTable" class="nowrap"/>
+    </abp-card-body>
+</abp-card>

@@ -1,4 +1,7 @@
-﻿using System;
+using Iptb.DivarTozi.MantageHa;
+using Iptb.DivarTozi.DastebandiHa;
+using Iptb.DivarTozi.AgahiHa;
+using System;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -40,6 +43,9 @@ public class DivarToziEntityFrameworkCoreModule : AbpModule
                 /* Remove "includeAllEntities: true" to create
                  * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
+            options.AddRepository<Agahi, AgahiRepository>();
+            options.AddRepository<Dastebandi, DastebandiRepository>();
+            options.AddRepository<Mantage, MantageRepository>();
         });
 
         Configure<AbpDbContextOptions>(options =>

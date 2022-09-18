@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
+using Iptb.DivarTozi.Permissions;
 using Iptb.DivarTozi.Localization;
 using Iptb.DivarTozi.MultiTenancy;
 using Volo.Abp.Identity.Web.Navigation;
@@ -45,5 +46,23 @@ public class DivarToziMenuContributor : IMenuContributor
 
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 3);
+        if (await context.IsGrantedAsync(DivarToziPermissions.Agahi.Default))
+        {
+            context.Menu.AddItem(
+                new ApplicationMenuItem(DivarToziMenus.Agahi, l["Menu:Agahi"], "/AgahiHa/Agahi")
+            );
+        }
+        if (await context.IsGrantedAsync(DivarToziPermissions.Dastebandi.Default))
+        {
+            context.Menu.AddItem(
+                new ApplicationMenuItem(DivarToziMenus.Dastebandi, l["Menu:Dastebandi"], "/DastebandiHa/Dastebandi")
+            );
+        }
+        if (await context.IsGrantedAsync(DivarToziPermissions.Mantage.Default))
+        {
+            context.Menu.AddItem(
+                new ApplicationMenuItem(DivarToziMenus.Mantage, l["Menu:Mantage"], "/MantageHa/Mantage")
+            );
+        }
     }
 }

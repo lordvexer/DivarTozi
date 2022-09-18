@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -12,6 +12,10 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using Iptb.DivarTozi.AgahiHa;
+using Volo.Abp.EntityFrameworkCore.Modeling;
+using Iptb.DivarTozi.DastebandiHa;
+using Iptb.DivarTozi.MantageHa;
 
 namespace Iptb.DivarTozi.EntityFrameworkCore;
 
@@ -51,6 +55,9 @@ public class DivarToziDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     #endregion
+    public DbSet<Agahi> Agahis { get; set; }
+    public DbSet<Dastebandi> Dastebandis { get; set; }
+    public DbSet<Mantage> Mantages { get; set; }
 
     public DivarToziDbContext(DbContextOptions<DivarToziDbContext> options)
         : base(options)
@@ -81,5 +88,35 @@ public class DivarToziDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+
+        builder.Entity<Agahi>(b =>
+        {
+            b.ToTable(DivarToziConsts.DbTablePrefix + "Agahis", DivarToziConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            
+
+            /* Configure more properties here */
+        });
+
+
+        builder.Entity<Dastebandi>(b =>
+        {
+            b.ToTable(DivarToziConsts.DbTablePrefix + "Dastebandis", DivarToziConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            
+
+            /* Configure more properties here */
+        });
+
+
+        builder.Entity<Mantage>(b =>
+        {
+            b.ToTable(DivarToziConsts.DbTablePrefix + "Mantages", DivarToziConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            
+
+            /* Configure more properties here */
+        });
     }
 }
