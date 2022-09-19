@@ -19,6 +19,7 @@
     <Content Remove="Logs\**" />
     <EmbeddedResource Remove="Logs\**" />
     <None Remove="Logs\**" />
+    <Content Remove="package-lock.json" />
   </ItemGroup>
 
   <ItemGroup>
