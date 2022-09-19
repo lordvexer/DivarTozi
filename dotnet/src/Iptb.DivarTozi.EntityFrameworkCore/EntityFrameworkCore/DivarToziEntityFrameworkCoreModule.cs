@@ -46,6 +46,7 @@ public class DivarToziEntityFrameworkCoreModule : AbpModule
             options.AddRepository<Agahi, AgahiRepository>();
             options.AddRepository<Dastebandi, DastebandiRepository>();
             options.AddRepository<Mantage, MantageRepository>();
+            options.AddRepository<AgahiAttachment, AgahiAttachmentRepository>();
         });
 
         Configure<AbpDbContextOptions>(options =>

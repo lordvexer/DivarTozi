@@ -16,4 +16,5 @@ public interface IDastebandiAppService :
 {
     Task<PagedResultDto<DastebandiDto>> DaryaftDastebandiHa(PagedAndSortedAndFilteredResultRequestDto input);
     Task<ListResultDto<DastebandiDto>> JostejooyeDastebandiHa(string filter);
+    Task<ListResultDto<DastebandiDto>> JostejooyeDastebandiHayePedar(string filter);
 }

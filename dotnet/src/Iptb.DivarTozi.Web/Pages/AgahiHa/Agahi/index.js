@@ -45,6 +45,17 @@ $(function () {
                 }
             },
             {
+                title: l("AgahiAttachment"),
+                data: "Id",
+                render: function (data, index, row) {
+                    let url = `/AgahiHa/AgahiAttachment/?AgahiId=${row.id}`
+                    let icon = '<span class="fa fa-paperclip"></span>';
+                    
+                    return `<a href="${url}" title="${l('AgahiAttachment')}" target="_blank">${icon}</a>`
+                },
+                orderable: false
+            },
+            {
                 title: l('AgahiRegionId'),
                 data: "regionId"
             },

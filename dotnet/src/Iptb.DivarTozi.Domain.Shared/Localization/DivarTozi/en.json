@@ -33,6 +33,17 @@
     "MantageName": "MantageName",
     "CreateMantage": "CreateMantage",
     "EditMantage": "EditMantage",
-    "MantageDeletionConfirmationMessage": "Are you sure to delete the mantage {0}?"
+    "MantageDeletionConfirmationMessage": "Are you sure to delete the mantage {0}?",
+    "Permission:AgahiAttachment": "AgahiAttachment",
+    "Menu:AgahiAttachment": "MenuAgahiAttachment",
+    "AgahiAttachment": "AgahiAttachment",
+    "AgahiAttachmentAgahiId": "AgahiAttachmentAgahiId",
+    "AgahiAttachmentContainerFilePath": "AgahiAttachmentContainerFilePath",
+    "AgahiAttachmentFileName": "AgahiAttachmentFileName",
+    "AgahiAttachmentFileExtension": "AgahiAttachmentFileExtension",
+    "AgahiAttachmentDescription": "AgahiAttachmentDescription",
+    "CreateAgahiAttachment": "CreateAgahiAttachment",
+    "EditAgahiAttachment": "EditAgahiAttachment",
+    "AgahiAttachmentDeletionConfirmationMessage": "Are you sure to delete the agahiAttachment {0}?"
   }
 }

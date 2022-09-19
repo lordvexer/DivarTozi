@@ -1,15 +1,39 @@
 ﻿@page
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Iptb.DivarTozi.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Bundling
+@using Volo.Abp.AspNetCore.Mvc.UI.Theming
 @using Volo.Abp.Users
 @model Iptb.DivarTozi.Web.Pages.IndexModel
 @inject IHtmlLocalizer<DivarToziResource> L
 @inject ICurrentUser CurrentUser
+@inject IThemeManager ThemeManager
 @{
-    Layout = null;
+    Layout = ThemeManager.CurrentTheme.GetLayout(StandardLayouts.Empty);
+    ViewBag.FluidLayout = true;
 }
-<link href="/libs/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" type="text/css" />
-<link href="/index.css" rel="stylesheet" type="text/css" />
+
+@section styles {
+    <abp-style src="/index.css"></abp-style>
+    <!-- FavIcons Add -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/FavIcon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/FavIcon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/FavIcon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/FavIcon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/FavIcon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/FavIcon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/FavIcon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/FavIcon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/FavIcon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/FavIcon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/FavIcon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/FavIcon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/FavIcon/favicon-16x16.png">
+    <link rel="manifest" href="/img/FavIcon/manifest.json">
+    <meta name="msapplication-TileColor" content="#6c19ff">
+    <meta name="msapplication-TileImage" content="/img/FavIcon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#6c19ff">
+}
     <!-- NavBar -->
     <header style="height: 170px;margin-bottom: 8rem;">
         <nav class="navbar navbar-expand-md navbar-light NavStyle  ">
@@ -52,13 +76,13 @@
     </header>
     <div class="container-fluid ">
         <div class="row SearchAndCategory">
-            <div class="col-lg-6 col-sm-12 col-md-12 order-md-first">
+            <div class="col-lg-6 col-sm-12 col-md-12">
                 <div class="">
                     <img class="ImageBackground" src="/img/Background.png">
                 </div>
             </div>
 
-            <div class="col-lg-6 col-sm-12 col-sm-12 ">
+            <div class="col-lg-6 col-sm-12 col-sm-12 order-md-first">
                 <div class="card Category">
                     <button class="CitySellection" data-bs-toggle="modal" data-bs-target="#CitySelectionModal">فیلتر بر
                         اساس شهر</button>

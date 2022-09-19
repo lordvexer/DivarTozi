@@ -58,6 +58,7 @@ public class DivarToziDbContext :
     public DbSet<Agahi> Agahis { get; set; }
     public DbSet<Dastebandi> Dastebandis { get; set; }
     public DbSet<Mantage> Mantages { get; set; }
+    public DbSet<AgahiAttachment> AgahiAttachments { get; set; }
 
     public DivarToziDbContext(DbContextOptions<DivarToziDbContext> options)
         : base(options)
@@ -113,6 +114,16 @@ public class DivarToziDbContext :
         builder.Entity<Mantage>(b =>
         {
             b.ToTable(DivarToziConsts.DbTablePrefix + "Mantages", DivarToziConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            
+
+            /* Configure more properties here */
+        });
+
+
+        builder.Entity<AgahiAttachment>(b =>
+        {
+            b.ToTable(DivarToziConsts.DbTablePrefix + "AgahiAttachments", DivarToziConsts.DbSchema);
             b.ConfigureByConvention(); 
             
 

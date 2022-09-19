@@ -14,7 +14,7 @@ public class Index_Tests : DivarToziWebTestBase
         // Arrange
 
         // Act
-        var response = await GetResponseAsStringAsync("/Agahi");
+        var response = await GetResponseAsStringAsync("/AgahiAttachment");
 
         // Assert
         response.ShouldNotBeNull();

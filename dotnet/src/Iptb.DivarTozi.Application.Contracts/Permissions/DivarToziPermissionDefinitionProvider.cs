@@ -26,6 +26,11 @@ public class DivarToziPermissionDefinitionProvider : PermissionDefinitionProvide
         mantagePermission.AddChild(DivarToziPermissions.Mantage.Create, L("Permission:Create"));
         mantagePermission.AddChild(DivarToziPermissions.Mantage.Update, L("Permission:Update"));
         mantagePermission.AddChild(DivarToziPermissions.Mantage.Delete, L("Permission:Delete"));
+
+        var agahiAttachmentPermission = myGroup.AddPermission(DivarToziPermissions.AgahiAttachment.Default, L("Permission:AgahiAttachment"));
+        agahiAttachmentPermission.AddChild(DivarToziPermissions.AgahiAttachment.Create, L("Permission:Create"));
+        agahiAttachmentPermission.AddChild(DivarToziPermissions.AgahiAttachment.Update, L("Permission:Update"));
+        agahiAttachmentPermission.AddChild(DivarToziPermissions.AgahiAttachment.Delete, L("Permission:Delete"));
     }
 
     private static LocalizableString L(string name)

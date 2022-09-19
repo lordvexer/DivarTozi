@@ -10,4 +10,5 @@ public class DivarToziMenus
     public const string Agahi = Prefix + ".Agahi";
     public const string Dastebandi = Prefix + ".Dastebandi";
     public const string Mantage = Prefix + ".Mantage";
+    public const string AgahiAttachment = Prefix + ".AgahiAttachment";
 }
