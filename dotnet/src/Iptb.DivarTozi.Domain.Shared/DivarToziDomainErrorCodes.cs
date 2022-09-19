@@ -1,0 +1,6 @@
+﻿namespace Iptb.DivarTozi;
+
+public static class DivarToziDomainErrorCodes
+{
+    /* You can add your business exception error codes here, as constants */
+}

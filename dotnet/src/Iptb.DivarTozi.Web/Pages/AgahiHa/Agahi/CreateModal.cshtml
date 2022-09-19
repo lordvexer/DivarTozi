@@ -1,0 +1,36 @@
+@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal;
+@using Iptb.DivarTozi.Localization
+@inject IHtmlLocalizer<DivarToziResource> L
+@model Iptb.DivarTozi.Web.Pages.AgahiHa.Agahi.CreateModalModel
+@{
+    Layout = null;
+}
+
+
+    <abp-modal>
+        <abp-modal-header title="@L["CreateAgahi"].Value"></abp-modal-header>
+        <abp-modal-body>
+            
+            <abp-input asp-for="ViewModel.Title"></abp-input>
+            <abp-select asp-for="ViewModel.DastebandiId"
+                        class="auto-complete-select"
+                        autocomplete-api-url="/api/app/dastebandi/jostejooye-dastebandi-ha"
+                        autocomplete-display-property-name="name"
+                        autocomplete-filter-param-name="filter"
+                        autocomplete-items-property-name="items"
+                        autocomplete-value-property-name="id"></abp-select>
+
+            <abp-select asp-for="ViewModel.RegionId"
+                        class="auto-complete-select"
+                        autocomplete-api-url="/api/app/mantage/jostejooye-mantage-ha"
+                        autocomplete-display-property-name="name"
+                        autocomplete-filter-param-name="filter"
+                        autocomplete-items-property-name="items"
+                        autocomplete-value-property-name="id"></abp-select>
+            <abp-input asp-for="ViewModel.OfficeName"></abp-input>
+            <abp-input asp-for="ViewModel.Brief"></abp-input>
+        </abp-modal-body>
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
