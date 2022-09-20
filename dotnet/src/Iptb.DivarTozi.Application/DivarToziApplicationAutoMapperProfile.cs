@@ -21,5 +21,8 @@ public class DivarToziApplicationAutoMapperProfile : Profile
         CreateMap<CreateUpdateDastebandiDto, Dastebandi>(MemberList.Source);
         CreateMap<Mantage, MantageDto>();
         CreateMap<CreateUpdateMantageDto, Mantage>(MemberList.Source);
+        CreateMap<ViewAttachment, AgahiAttachmentDto>();
+        CreateMap<AgahiAttachment, AgahiAttachmentDto>();
+        CreateMap<CreateUpdateAgahiAttachmentDto, AgahiAttachment>(MemberList.Source);
     }
 }

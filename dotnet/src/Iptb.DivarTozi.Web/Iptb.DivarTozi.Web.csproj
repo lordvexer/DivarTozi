@@ -19,6 +19,7 @@
     <Content Remove="Logs\**" />
     <EmbeddedResource Remove="Logs\**" />
     <None Remove="Logs\**" />
+    <Content Remove="package-lock.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +49,11 @@
     <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="5.3.4" />
     <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="5.3.4" />
     <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="5.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\libs\dropzone\dropzone-min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\libs\dropzone\dropzone.css" />
   </ItemGroup>
 
 </Project>

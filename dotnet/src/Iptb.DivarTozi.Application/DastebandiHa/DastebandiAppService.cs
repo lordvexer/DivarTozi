@@ -53,5 +53,14 @@ public class DastebandiAppService : CrudAppService<Dastebandi, DastebandiDto, Gu
             ObjectMapper.Map<List<Dastebandi>, List<DastebandiDto>>(dastebandiHa)
         );
     }
-    
+
+    [HttpGet]
+    public async Task<ListResultDto<DastebandiDto>> JostejooyeDastebandiHayePedar(string filter)
+    {
+        var dastebandiHa = await _repository
+            .GetListAsync(filter, true);
+        return new ListResultDto<DastebandiDto>(
+            ObjectMapper.Map<List<Dastebandi>, List<DastebandiDto>>(dastebandiHa)
+        );
+    }
 }

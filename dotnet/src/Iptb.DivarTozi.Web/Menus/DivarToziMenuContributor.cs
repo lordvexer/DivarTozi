@@ -64,5 +64,11 @@ public class DivarToziMenuContributor : IMenuContributor
                 new ApplicationMenuItem(DivarToziMenus.Mantage, l["Menu:Mantage"], "/MantageHa/Mantage")
             );
         }
+        if (await context.IsGrantedAsync(DivarToziPermissions.AgahiAttachment.Default))
+        {
+            context.Menu.AddItem(
+                new ApplicationMenuItem(DivarToziMenus.AgahiAttachment, l["Menu:AgahiAttachment"], "/AgahiHa/AgahiAttachment")
+            );
+        }
     }
 }

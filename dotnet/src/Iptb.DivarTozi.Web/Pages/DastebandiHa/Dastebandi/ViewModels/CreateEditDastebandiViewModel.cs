@@ -7,4 +7,7 @@ public class CreateEditDastebandiViewModel
 {
     [Display(Name = "DastebandiName")]
     public string Name { get; set; }
+
+    [Display(Name = "Dastebandi")]
+    public Guid? ParentId { get; set; }
 }

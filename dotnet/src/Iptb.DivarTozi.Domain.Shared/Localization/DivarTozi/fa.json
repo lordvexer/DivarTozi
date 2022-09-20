@@ -33,6 +33,17 @@
     "MantageName": "نام",
     "CreateMantage": "ایجاد",
     "EditMantage": "ویرایش",
-    "MantageDeletionConfirmationMessage": "آیا با حذف منطقه {0} موافق هستید؟"
+    "MantageDeletionConfirmationMessage": "آیا با حذف منطقه {0} موافق هستید؟",
+    "Permission:AgahiAttachment": "AgahiAttachment",
+    "Menu:AgahiAttachment": "MenuAgahiAttachment",
+    "AgahiAttachment": "AgahiAttachment",
+    "AgahiAttachmentAgahiId": "AgahiAttachmentAgahiId",
+    "AgahiAttachmentContainerFilePath": "AgahiAttachmentContainerFilePath",
+    "AgahiAttachmentFileName": "AgahiAttachmentFileName",
+    "AgahiAttachmentFileExtension": "AgahiAttachmentFileExtension",
+    "AgahiAttachmentDescription": "AgahiAttachmentDescription",
+    "CreateAgahiAttachment": "CreateAgahiAttachment",
+    "EditAgahiAttachment": "EditAgahiAttachment",
+    "AgahiAttachmentDeletionConfirmationMessage": "Are you sure to delete the agahiAttachment {0}?"
   }
 }
